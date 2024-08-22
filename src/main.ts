@@ -9,7 +9,11 @@ import ToastService from 'primevue/toastservice';
 
 import '@/assets/styles.scss';
 import '@/assets/tailwind.css';
+import 'primeicons/primeicons.css';
 import { createPinia } from 'pinia';
+import Button from 'primevue/button';
+import Card from 'primevue/card';
+import Rating from 'primevue/rating';
 
 const pinia = createPinia();
 
@@ -27,5 +31,9 @@ app.use(PrimeVue, {
 });
 app.use(ToastService);
 app.use(ConfirmationService);
+
+app.component('Button', Button);
+app.component('Card', Card);
+app.component('Rating', Rating);
 
 app.mount('#app');
